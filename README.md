@@ -15,7 +15,7 @@ Se ha optado por node.js por las siguientes razones:
 - Por la existencia de múltiples herramientas que ayudan en el desarrollo con node.js.
 
 * Como framework se usará ***Express.js*** debido a su versatilidad y a las buenas críticas.
-* Como controlador de versiones se usará ***npm***.
+* Como controlador de versiones se usará ***nvm***.
 * Para los test se usará ***Jest*** (no implementado).
 * Para el sistema de log se usará ***Winston*** (no implementado).
 
