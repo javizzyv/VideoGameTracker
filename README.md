@@ -19,11 +19,9 @@ Se ha optado por node.js por las siguientes razones:
 * Para los test se usará ***Jest*** (no implementado).
 * Para el sistema de log se usará ***Winston*** (no implementado).
 
-## Hito 1
+## Desarrollo
 
-En este hito se ha configurado el esqueleto de la aplicación con npm y Express y se ha dejado de forma que se muestre una página web por defecto.
-* Para ejecutar la aplicación habrá que tener la [configuración](docs/configuracion.md) correcta y seguir [estos](docs/pasos-para-ejecucion.md) pasos.
-
+Para ver como ha ido el desarrollo se puede ver [aquí](docs/desarrollo.md).
 
 ## Configuración de git
 Para configurar git y hacer clone mediante SSH se ha hecho de la siguiente [forma](docs/ssh.md).
