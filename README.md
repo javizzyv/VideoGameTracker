@@ -29,4 +29,5 @@ En este hito se ha configurado el esqueleto de la aplicación con npm y Express 
 Para configurar git y hacer clone mediante SSH se ha hecho de la siguiente [forma](docs/ssh.md).
 
 ## Autor
+
 *Javier Victoria Mohamed*
