@@ -1,15 +1,16 @@
-import Videojuego from './Videojuego.js'
-
 class VGT {
-    
+
+    VG = require("./Videojuego.js");
+
     constructor(titulo, descripcion, generos) {
         VG = new Videojuego(titulo, descripcion, generos);
     }
 
-    verVideojuego() {
-        this.VG.show;
-    }
+
 }
 
-let vgt = new VGT (1,2,3);
-vgt.verVideojuego();
+function show () {
+    console.log("Aún no hay ningún videojuego");
+}
+
+show();

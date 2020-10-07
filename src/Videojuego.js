@@ -3,6 +3,7 @@ class Videojuego {
     constructor(titulo, descripcion, generos) {
         this.descripcion = descripcion;
         this.titulo = titulo;
+        this.generos = require("./Generos.js");
         this.generos = generos;
     }
 
@@ -16,9 +17,5 @@ class Videojuego {
 
     cambiarGeneros(gen) {
         this.generos = gen;
-    }
-
-    show () {
-        alert("Aún no hay ningún videojuego");
     }
 }
