@@ -22,6 +22,15 @@ Se ha optado por node.js por las siguientes razones:
 
 Para ver como ha ido el desarrollo se puede ver [aquí](docs/desarrollo.md).
 
+### Historias de usuario
+
+La idea es centrarme en estos requisitos e ir construyendo a partir de estos objetivos:
+
+- [Mejorar constantemente el ámbito visual del proyecto](https://github.com/javizzyv/VideoGameTracker/issues/3).
+- [Permitir añadir videojuegos predeterminados o nuevos para realizar su seguimiento](https://github.com/javizzyv/VideoGameTracker/issues/4).
+- [Permitir añadir que nos ha parecido un juego en concreto](https://github.com/javizzyv/VideoGameTracker/issues/5).
+- [Poner nota si así lo queremos a un juego en concreto](https://github.com/javizzyv/VideoGameTracker/issues/6).
+
 ## Configuración de git
 Para configurar git y hacer clone mediante SSH se ha hecho de la siguiente [forma](docs/ssh.md).
 
