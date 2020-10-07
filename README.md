@@ -13,10 +13,9 @@ Se ha optado por node.js por las siguientes razones:
 - Por su popularidad en empresas y de cara a aprender un nuevo lenguaje muy usado en el ámbito laboral.
 - Por la existencia de múltiples herramientas que ayudan en el desarrollo con node.js.
 
-* Como framework se usará ***Express.js*** debido a su versatilidad y a las buenas críticas (no implementado).
+* Como framework aún no se ha decidido que usar (no implementado).
 * Como controlador de versiones se usará ***nvm***.
-* Para los test se usará ***Jest*** (no implementado).
-* Para el sistema de log se usará ***Winston*** (no implementado).
+* Para los test aún no se ha decidido que usar (no implementado).
 
 ## Desarrollo
 
