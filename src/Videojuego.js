@@ -19,6 +19,6 @@ class Videojuego {
     }
 
     show () {
-        console.log("Aún no hay ningún videojuego")
+        alert("Aún no hay ningún videojuego");
     }
 }
