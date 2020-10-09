@@ -18,10 +18,11 @@ class Videojuego {
     cambiarGeneros(gen) {
         this.generos = gen;
     }
-    
+
+    show () {
+        console.log("Aún no hay ningún videojuego");
+    }
+
 }
 
-exports.cambiarGeneros = cambiarGeneros;
-exports.cambiarNombre = cambiarNombre;
-exports.cambiarDescripcion = cambiarDescripcion;
-exports.Videojuego = Videojuego;
+module.exports.Videojuego = Videojuego;

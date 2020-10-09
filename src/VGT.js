@@ -1,8 +1,7 @@
 class VGT {
 
-    VG = require("./Videojuego.js");
-
     constructor(titulo, descripcion, generos) {
+        var VG = require("./Videojuego");
         VG = new Videojuego(titulo, descripcion, generos);
     }
 

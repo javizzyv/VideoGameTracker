@@ -10,10 +10,10 @@ const mas16 = {
 
 const mas18 = {
     SHT: "Shooter",
-    TRR = "Terror",
-    GOR = "Gore",
-    NUD = "Desnudos",
-    WPN = "Armas"
+    TRR: "Terror",
+    GOR: "Gore",
+    NUD: "Desnudos",
+    WPN: "Armas"
 }
 
 exports.todos = todos;
