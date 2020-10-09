@@ -13,7 +13,7 @@ Se ha optado por node.js por las siguientes razones:
 - Por su popularidad en empresas y de cara a aprender un nuevo lenguaje muy usado en el ámbito laboral.
 - Por la existencia de múltiples herramientas que ayudan en el desarrollo con node.js.
 
-Además [aquí]() se irán detallando las diferentes herramientas que se vayan usando.
+Además [aquí](./docs/herramientas.md) se irán detallando las diferentes herramientas que se vayan usando.
 
 ## Clases principales y de prueba
 
