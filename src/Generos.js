@@ -15,3 +15,7 @@ const mas18 = {
     NUD = "Desnudos",
     WPN = "Armas"
 }
+
+exports.todos = todos;
+exports.mas16 = mas16;
+exports.mas18 = mas18;

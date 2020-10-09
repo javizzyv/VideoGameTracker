@@ -18,4 +18,10 @@ class Videojuego {
     cambiarGeneros(gen) {
         this.generos = gen;
     }
+    
 }
+
+exports.cambiarGeneros = cambiarGeneros;
+exports.cambiarNombre = cambiarNombre;
+exports.cambiarDescripcion = cambiarDescripcion;
+exports.Videojuego = Videojuego;
