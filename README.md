@@ -17,6 +17,23 @@ Se ha optado por node.js por las siguientes razones:
 * Como controlador de versiones se usará ***nvm***.
 * Para los test aún no se ha decidido que usar (no implementado).
 
+## Clases principales y de prueba
+
+* La clase principal como bien se indica en el archivo [iv.yaml](https://github.com/javizzyv/VideoGameTracker/blob/master/iv.yaml) es [esta](https://github.com/javizzyv/VideoGameTracker/blob/master/src/VGT.js). Todos los códigos fuentes están ubicados [aquí](https://github.com/javizzyv/VideoGameTracker/tree/master/src).
+* He añadido un index(https://github.com/javizzyv/VideoGameTracker/blob/master/src/index.html) para ir probando cosas a lo largo del proyecto.
+
+## Issues
+### Abiertos
+[Estos](https://github.com/javizzyv/VideoGameTracker/issues) son los issues que aún no se han cerrado.
+### Cerrados
+[Estos](https://github.com/javizzyv/VideoGameTracker/issues?q=is%3Aissue+is%3Aclosed) son los issue que se han ido cerrando.
+
+## Milestones
+### Abiertos
+[Estos](https://github.com/javizzyv/VideoGameTracker/milestones) son los milestones que aún no se han cerrado.
+### Cerrados
+[Estos](https://github.com/javizzyv/VideoGameTracker/milestones?state=closed) son los milestones que se han ido cerrando.
+
 ## Desarrollo
 
 Para ver como ha ido el desarrollo se puede ver [aquí](docs/desarrollo.md).
