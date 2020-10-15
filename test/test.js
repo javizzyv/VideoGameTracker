@@ -15,3 +15,10 @@ describe('CreaVideojuego', function(){
         assert.equal(vgPrueba.aString(),"LoL Juego en línea de estrategia y rol MOBA","Videojuego creado correctamente");
     });
 });
+
+describe('CompruebaVGT', function(){
+    it('Comprueba que desde la clase VGT se puede trabajar con las otras clases correctamente (modular)', function(){
+        vgt.inicializar();
+        assert.equal(vgt.aString(),"LoL Juego en línea de estrategia y rol MOBA","VGT puede usar otras clases correctamente");
+    });
+});
