@@ -5,7 +5,8 @@ const todos = {
 
 const mas16 = {
     RPG: "JuegoDeRol",
-    VNL: "AventuraGrafica"
+    VNL: "AventuraGrafica",
+    MOB: "MOBA"
 }
 
 const mas18 = {

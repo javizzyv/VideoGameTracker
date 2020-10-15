@@ -1,25 +1,22 @@
 var VG = require("./Videojuego");
+//var VGPrueba = require("./Videojuego");
+var vg1 = new VG.Videojuego();
+var generos = require("./Generos");
 
-class VGT {
-
-    constructor() {
-    }
-
-    inicializar() {
-        var vg1 = new VG.Videojuego('LoL','Juego en línea de estrategia y rol','MOBA'); 
-    }
-
-    getV(){
-        return this.vg1;
-    }
-
+function inicializar() {
+    vg1.cambiarNombre('LoL');
+    vg1.cambiarDescripcion('Juego en línea de estrategia y rol');
+    vg1.cambiarGeneros(generos.mas16.MOB);
 }
-
-var v = new VGT();
-v.inicializar
 
 function show () {
     console.log("Aún no hay ningún videojuego");
 }
 
-show();
+//show();
+
+inicializar();
+
+console.log(vg1.getNombre());
+console.log(vg1.getDescripcion());
+console.log(vg1.getGeneros());
