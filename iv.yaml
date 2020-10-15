@@ -1,1 +1,7 @@
-entidad: src/VGT.js
+entidad: 
+    - src/VGT.js
+    - src/Videojuego.js
+    - src/Generos.js
+lenguaje: node
+taskfile: 
+test: test/test.js
