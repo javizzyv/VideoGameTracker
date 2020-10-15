@@ -19,6 +19,18 @@ class Videojuego {
         this.generos = gen;
     }
 
+    getNombre(){
+        return this.titulo;
+    }
+
+    getDescripcion(){
+        return this.descripcion;
+    }
+
+    getGeneros(){
+        return this.generos;
+    }
+
     show () {
         console.log("Aún no hay ningún videojuego");
     }
