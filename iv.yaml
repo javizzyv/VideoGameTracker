@@ -3,5 +3,5 @@ entidad:
     - src/Videojuego.js
     - src/Generos.js
 lenguaje: node
-taskfile: 
+taskfile: gulpfile.js
 test: test/test.js

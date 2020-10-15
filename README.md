@@ -15,10 +15,12 @@ Se ha optado por node.js por las siguientes razones:
 
 Además [aquí](./docs/herramientas.md) se irán detallando las diferentes herramientas que se vayan usando.
 
-## Clases principales y de prueba
+## Archivos importantes
 
 * La clase principal como bien se indica en el archivo [iv.yaml](https://github.com/javizzyv/VideoGameTracker/blob/master/iv.yaml) es [esta](https://github.com/javizzyv/VideoGameTracker/blob/master/src/VGT.js). Todos los códigos fuentes están ubicados [aquí](https://github.com/javizzyv/VideoGameTracker/tree/master/src).
-* He añadido un [index](https://github.com/javizzyv/VideoGameTracker/blob/master/src/index.html) para ir probando cosas a lo largo del proyecto.
+* La herramienta de construcción, en este caso un gulpfile, está [aquí](gulpfile.js).
+* Para realizar los test's tenemos [este](test/test.js) archivo.
+* [Aquí](docs/pasos-para-ejecucion.md) los pasos de ejecución en caso de que algo falle.
 
 ## Issues
 ### Abiertos
