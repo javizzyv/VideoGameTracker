@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/javizzyv/VideoGameTracker/issues"
   },
-  "homepage": "https://github.com/javizzyv/VideoGameTracker#readme"
+  "homepage": "https://github.com/javizzyv/VideoGameTracker#readme",
+  "dependencies": {
+    "mocha": "^8.1.3"
+  }
 }
