@@ -35,6 +35,10 @@ class Videojuego {
         console.log("Aún no hay ningún videojuego");
     }
 
+    aString(){
+        return (this.titulo.toString() + " " + this.descripcion.toString() + " " + this.generos.toString()).toString();
+    }
+
 }
 
 module.exports.Videojuego = Videojuego;

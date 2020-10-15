@@ -20,3 +20,4 @@ inicializar();
 console.log(vg1.getNombre());
 console.log(vg1.getDescripcion());
 console.log(vg1.getGeneros());
+console.log(vg1.aString());
