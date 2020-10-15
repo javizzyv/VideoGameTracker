@@ -21,9 +21,12 @@
   },
   "homepage": "https://github.com/javizzyv/VideoGameTracker#readme",
   "dependencies": {
+    "gulp-run": "^1.7.1",
+    "gulp-run-command": "0.0.10",
     "mocha": "^8.1.3"
   },
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "gulp-mocha": "^7.0.2"
   }
 }
