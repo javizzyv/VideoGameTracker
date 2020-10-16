@@ -2,6 +2,6 @@ entidad:
     - src/VGT.js
     - src/Videojuego.js
     - src/Generos.js
-lenguaje: node
+lenguaje: JavaScript
 taskfile: gulpfile.js
 test: test/test.js
