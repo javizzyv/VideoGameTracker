@@ -2,7 +2,7 @@
 API desarrollada para la asignatura IV en la ETSIIT
 
 * Licencia: [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-* Version: ![version](https://img.shields.io/badge/version-0.1.7-red)
+* Version: ![version](https://img.shields.io/badge/version-0.2.0-red)
 * Lenguaje: [![Powered by: JavaScript](https://img.shields.io/badge/powered%20by-javascript-yellow)](https://www.javascript.com)
 
 ## Descripción
@@ -20,6 +20,20 @@ Además [aquí](./docs/herramientas.md) se irán detallando las diferentes herra
 * La clase principal como bien se indica en el archivo [iv.yaml](https://github.com/javizzyv/VideoGameTracker/blob/master/iv.yaml) es [esta](https://github.com/javizzyv/VideoGameTracker/blob/master/src/VGT.js). Todos los códigos fuentes están ubicados [aquí](https://github.com/javizzyv/VideoGameTracker/tree/master/src).
 * La herramienta de construcción, en este caso un gulpfile, está [aquí](gulpfile.js).
 * Para realizar los test's tenemos [este](test/test.js) archivo.
+
+## Para ejecutar
+
+### Para test
+
+* Ejecutamos `npm install --global gulp-cli` para tener la orden `gulp` en la línea de órdenes.
+* Ejecutamos `gulp` (Esto hará que se instalen las dependencias y se pasen los test's).
+
+### En general
+
+* En caso de que queramos hacerlo a mano tendremos que hacer `npm install` para instalar las dependencias, `npm test` para pasar los test's, y `npm start` si queremos ejecutar la aplicación.
+  
+### Extra
+
 * [Aquí](docs/pasos-para-ejecucion.md) los pasos de ejecución en caso de que algo falle.
 
 ## Issues
