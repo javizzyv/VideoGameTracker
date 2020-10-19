@@ -17,6 +17,10 @@ Además [aquí](./docs/herramientas.md) se irán detallando las diferentes herra
 
 * Como controlador de versiones se usará ***nvm***.
 * Para los test se usará [Mocha](https://mochajs.org) debido a su sencillez tanto en la sintaxis como en la funciones (cosa que casa muy bien con mi aplicación ya que no es muy ambiciosa) y por su popularidad.
+Los test que se han realizado hasta ahora sirven para:
+  - El primero comprueba que la sintaxis y el funcionamiento de la clase [Generos](src/Generos.js) es correcta y se puede usar como enumerado sin problema.
+  - El segundo comprueba que se puede crear un objeto de la clase [Videojuego](src/Videojuego.js) correctamente (para añadir videojuegos en un futuro [HU1](https://github.com/javizzyv/VideoGameTracker/issues/4)).
+  - El tercero simplemente comprueba que todo esto se puede utilizar desde la clase [VGT](src/VGT.js) para ampliaciones futuras y para modularizar el código.
 * Como herramienta de construcción usaré [Gulp](https://gulpjs.com) debido a su compatibilidad con Mocha y a la sencilla interfaz del cli.
 
 ## Archivos importantes
@@ -35,11 +39,6 @@ Además [aquí](./docs/herramientas.md) se irán detallando las diferentes herra
 ### En general
 
 * En caso de que queramos hacerlo a mano tendremos que hacer `npm install` para instalar las dependencias, `npm test` para pasar los test's, y `npm start` si queremos ejecutar la aplicación.
-
-Los test que se han realizado hasta ahora sirven para:
-- El primero comprueba que la sintaxis y el funcionamiento de la clase [Generos](src/Generos.js) es correcta y se puede usar como enumerado sin problema.
-- El segundo comprueba que se puede crear un objeto de la clase [Videojuego](src/Videojuego.js) correctamente (para añadir videojuegos en un futuro [HU1](https://github.com/javizzyv/VideoGameTracker/issues/4)).
-- El tercero simplemente comprueba que todo esto se puede utilizar desde la clase [VGT](src/VGT.js) para ampliaciones futuras y para modularizar el código.
   
 ### Extra
 
