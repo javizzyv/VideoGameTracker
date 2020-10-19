@@ -38,7 +38,7 @@ Además [aquí](./docs/herramientas.md) se irán detallando las diferentes herra
 
 Los test que se han realizado hasta ahora sirven para:
 - El primero comprueba que la sintaxis y el funcionamiento de la clase [Generos](src/Generos.js) es correcta y se puede usar como enumerado sin problema.
-- El segundo comprueba que se puede crear un objeto de la clase [Videojuego](src/Videojuego.js) sin problema (para añadir videojuegos en un futuro [HU1](https://github.com/javizzyv/VideoGameTracker/issues/4)).
+- El segundo comprueba que se puede crear un objeto de la clase [Videojuego](src/Videojuego.js) correctamente (para añadir videojuegos en un futuro [HU1](https://github.com/javizzyv/VideoGameTracker/issues/4)).
 - El tercero simplemente comprueba que todo esto se puede utilizar desde la clase [VGT](src/VGT.js) para ampliaciones futuras y para modularizar el código.
   
 ### Extra
