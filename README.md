@@ -2,7 +2,7 @@
 API desarrollada para la asignatura IV en la ETSIIT
 
 * Licencia: [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-* Version: ![version](https://img.shields.io/badge/version-0.2.0-red)
+* Version: ![version](https://img.shields.io/badge/version-0.3.0-red)
 * Lenguaje: [![Powered by: JavaScript](https://img.shields.io/badge/powered%20by-javascript-yellow)](https://www.javascript.com)
 
 ## Descripción
@@ -15,20 +15,54 @@ Se ha optado por node.js por las siguientes razones:
 
 Además [aquí](./docs/herramientas.md) se irán detallando las diferentes herramientas que se vayan usando.
 
-* Como controlador de versiones se usará ***nvm***.
-* Para los test se usará [Mocha](https://mochajs.org) debido a su sencillez tanto en la sintaxis como en la funciones (cosa que casa muy bien con mi aplicación ya que no es muy ambiciosa) y por su popularidad.
-Los test que se han realizado hasta ahora sirven para:
-  - El primero comprueba que la sintaxis y el funcionamiento de la clase [Generos](src/Generos.js) es correcta y se puede usar como enumerado sin problema.
-  - El segundo comprueba que se puede crear un objeto de la clase [Videojuego](src/Videojuego.js) correctamente (para añadir videojuegos en un futuro [HU1](https://github.com/javizzyv/VideoGameTracker/issues/4)).
-  - El tercero simplemente comprueba que todo esto se puede utilizar desde la clase [VGT](src/VGT.js) para ampliaciones futuras y para modularizar el código.
-* Como biblioteca de aserciones no se ha usado ninguna en concreto, simplemente el módulo Assert de Node.js. En un futuro me replantearé usar Chai (por que casa muy bien con Mocha) si alguna funcionalidad lo requiere.
-* Como herramienta de construcción usaré [Gulp](https://gulpjs.com) debido a su compatibilidad con Mocha y a la sencilla interfaz del cli.
+## Docker
+
+Aquí se pondrá todo lo referente a Docker (Dockerfile, Docker Hub, ...)
+
+* El Dockerfile está [aquí](/Dockerfile)
+* Este es el repositorio en [Docker Hub](https://hub.docker.com/repository/docker/javizzyv/videogametracker/general)
+
+### Explicación del contenedor base elegido
+
+Para empezar, me he documentado de cuales son los más populares para node y cuales los más eficientes, he probado estos debido principalmente a ahorrarme problemas de compatibilidad y no he probado más porque en varios sitios recomentaban estos dos para node.
+
+Los dos que se han probado son:
+
+- '-slim': El contenedor base de node pero con menos herramientas y más liviano y comprimido. En este caso al principio no había problemas de compatibilidad pero al implementar el cambio de usuario de la forma en que está me hacía falta un contenedor con busybox para añadir el '-g'(gecos). Esto realmente no es un problema porque podría haber implementado el cambio de usuario de otra forma pero me gustaba esa en concreto. A parte de todo esto, el tiempo que tarda el build en esta imagen es 2 minutos
+
+![](docs/img/slim-tiempo.png)
+
+y pesa unos 60 MB.
+
+![](docs/img/slim-tamanio.png)
+
+- '-alpine': En este caso no tenía el problema de compatibilidad ni ningún otro y el tiempo de build es 1 minuto
+
+![](docs/img/alpine-tiempo.png)
+
+y el tamaño es de unos 40 MB.
+
+![](docs/img/alpine-tamanio.png)
+
+Así que mi decisión es clara, me he quedado con alpine por ser mas eficiente, liviano y tener menos problemas de compatibilidad en mi caso.
+
+
+
+### Automatización del push GitHub-DockerHub
+
+El proceso de automatización era simplemente un opción de Docker Hub como se ve aquí
+
+![](docs/img/auto-Docker.png)
+
+y aún no se ha probado a usar el registro de repositorios de GitHub o Docker Hub.
 
 ## Archivos importantes
 
 * La clase principal como bien se indica en el archivo [iv.yaml](https://github.com/javizzyv/VideoGameTracker/blob/master/iv.yaml) es [esta](https://github.com/javizzyv/VideoGameTracker/blob/master/src/VGT.js). Todos los códigos fuentes están ubicados [aquí](https://github.com/javizzyv/VideoGameTracker/tree/master/src).
 * La herramienta de construcción, en este caso un gulpfile, está [aquí](gulpfile.js).
 * Para realizar los test's tenemos [este](test/test.js) archivo.
+* El Dockerfile está [aquí](/Dockerfile)
+* Este es el repositorio en [Docker Hub](https://hub.docker.com/repository/docker/javizzyv/videogametracker/general) 
 
 ## Para ejecutar
 
