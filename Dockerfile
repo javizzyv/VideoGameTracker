@@ -12,4 +12,7 @@ COPY src ./src
 COPY test ./test
 COPY gulpfile.js ./
 
-CMD ["gulp"]
+RUN adduser -D -g '' usuarioIV
+USER usuarioIV
+
+CMD gulp
