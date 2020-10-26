@@ -14,8 +14,8 @@ RUN npm install
 RUN npm install --global gulp-cli
 
 # Copio los archivos necesarios
-COPY src ./src
-COPY test ./test
+#COPY src ./src
+#COPY test ./test
 COPY gulpfile.js ./
 
 # Añado un usuario sin contraseña y lo ponga para ejecutar lo siguiente
