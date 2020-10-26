@@ -6,6 +6,6 @@ exports.default = async function() {
     gulp.src('test')
         .pipe(mocha());
     
-    process.stdout.write(gulp.src('./')
-        .pipe(run('npm install')));
+    /*process.stdout.write(gulp.src('./')
+        .pipe(run('npm install')));*/
 }

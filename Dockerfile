@@ -23,4 +23,4 @@ RUN adduser -D -g '' usuarioIV
 USER usuarioIV
 
 # Ejecuto gulp para ejecutar los test's
-CMD gulp
+CMD ["gulp", "test"]
