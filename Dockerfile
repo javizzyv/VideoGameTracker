@@ -10,6 +10,6 @@ RUN npm install --global gulp-cli
 
 COPY src ./src
 COPY test ./test
-COPY gulpfile ./
+COPY gulpfile.js ./
 
 CMD ["gulp"]
