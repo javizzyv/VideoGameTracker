@@ -2,10 +2,17 @@ const gulp = require('gulp');
 const mocha = require('gulp-mocha');
 const run = require('gulp-run');
 
+
+gulp.task('test', async function() {
+    gulp.src('test/test.js')
+    .pipe(mocha());
+});
+
+gulp.task('install', async function() {
+    process.stdout.write(gulp.src('./')
+        .pipe(run('npm install')));
+})
+
 exports.default = async function() {
-    gulp.src('test')
-        .pipe(mocha());
-    
-    /*process.stdout.write(gulp.src('./')
-        .pipe(run('npm install')));*/
+
 }
