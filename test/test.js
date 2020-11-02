@@ -28,9 +28,22 @@ describe('CompruebaNotas', function(){
     it('Comprueba que se pueden comparar notas', function(){
         var vgPrueba = new vg.Videojuego('LoL','Juego en línea de estrategia y rol',gen.mas16.MOB, 9);
         videojuegos.push(vgPrueba);
-        var vgPrueba = new vg.Videojuego('Pokemon','RPG por turnos de coleccionar monstruos',gen.mas16.RPG, 9.5);
+        vgPrueba = new vg.Videojuego('Pokemon','RPG por turnos de coleccionar monstruos',gen.mas16.RPG, 9.5);
         videojuegos.push(vgPrueba);
         vgPrueba = vgt.compararNotas(videojuegos);
         assert.equal(vgPrueba.aString(),"Pokemon RPG por turnos de coleccionar monstruos JuegoDeRol 9.5","Se pueden comparar notas sin problema");
+    });
+});
+
+describe('CompruebaFavorito', function(){
+    it('Comprueba que la funcion para ver el favorito de un genero concreto funciona', function(){
+        var vgPrueba = new vg.Videojuego('LoL','Juego en línea de estrategia y rol',gen.mas16.MOB, 9.5);
+        videojuegos.push(vgPrueba);
+        vgPrueba = new vg.Videojuego('Dota','Juego en línea de estrategia y rol',gen.mas16.MOB, 9);
+        videojuegos.push(vgPrueba);
+        vgPrueba = new vg.Videojuego('Smite','Juego en línea de estrategia y rol',gen.mas16.MOB, 7);
+        videojuegos.push(vgPrueba);
+        vgPrueba = vgt.favoritoGenero(gen.mas16.MOB,videojuegos);
+        assert.equal(vgPrueba.aString(),"LoL Juego en línea de estrategia y rol MOBA 9.5","Videojuego favorito sacado con exito");
     });
 });

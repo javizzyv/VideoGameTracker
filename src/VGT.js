@@ -26,10 +26,10 @@ function favoritoGenero(gen, vgs){
     genero = gen;
     videojuegos = vgs;
 
-    for(let i=0 ; i<=videojuegos.length ; i++){
+    for(let i=0 ; i<videojuegos.length ; i++){
         if(videojuegos[i].getNota()>notaAux && videojuegos[i].getGeneros()==genero){
             notaAux = videojuegos[i].getNota();
-            vgAux = ideojuegos[i];
+            vgAux = videojuegos[i];
         }
     }
     return vgAux;
