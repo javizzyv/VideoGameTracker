@@ -1,10 +1,11 @@
 class Videojuego {
 
-    constructor(titulo, descripcion, generos) {
+    constructor(titulo, descripcion, generos, nota) {
         this.descripcion = descripcion;
         this.titulo = titulo;
         this.generos = require("./Generos.js");
         this.generos = generos;
+        this.nota = nota;
     }
 
     cambiarNombre(nombre) {
@@ -19,6 +20,10 @@ class Videojuego {
         this.generos = gen;
     }
 
+    cambiarNota(not){
+        this.nota = not;
+    }
+
     getNombre(){
         return this.titulo;
     }
@@ -31,12 +36,16 @@ class Videojuego {
         return this.generos;
     }
 
+    getNota(){
+        return this.nota;
+    }
+
     show () {
         console.log("Aún no hay ningún videojuego");
     }
 
     aString(){
-        return (this.titulo.toString() + " " + this.descripcion.toString() + " " + this.generos.toString()).toString();
+        return (this.titulo.toString() + " " + this.descripcion.toString() + " " + this.generos.toString() + " " + this.nota.toString()).toString();
     }
 
 }
