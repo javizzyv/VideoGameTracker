@@ -10,7 +10,7 @@ RUN npm install
 # Instala el cliente de gulp, necesario para pasar los test's
 RUN npm install --global gulp-cli
 
-# Borro archivos que no necesito ya
+# Borro archivos que ya no necesito
 RUN rm ./package*.json
 
 # Uso el usuario por defecto de node para permisos de no superusuario
