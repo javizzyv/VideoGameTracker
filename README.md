@@ -34,13 +34,13 @@ Los dos que se han probado son:
 
 Así que mi decisión es clara, me he quedado con alpine por ser mas eficiente, liviano y tener menos problemas de compatibilidad en mi caso.
 
-Todas las captura haciendo click [aquí](docs/img).
+Todas las capturas haciendo click [aquí](docs/img).
 
 ### Automatización del push GitHub-DockerHub
 
 El proceso de automatización era simplemente un opción de Docker Hub como se ve [aquí](docs/img/auto-Docker.png) y aún no se ha probado a usar el registro de repositorios de GitHub o Docker Hub.
 
-Todas las captura haciendo click [aquí](docs/img).
+Todas las capturas haciendo click [aquí](docs/img).
 
 ## Archivos importantes
 
