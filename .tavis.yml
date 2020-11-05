@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+    - 12.18.4
+    - 12
+    - 11
+    - 10
+before_install:
+    - npm install --global gulp-cli
+script:
+    - npm install
+    - npm test
