@@ -1,6 +1,6 @@
 class Videojuego {
 
-    constructor(titulo, descripcion, generos, nota, valoracion, duracion) {
+    constructor(titulo, descripcion, generos, nota, duracion, valoracion) {
         this.descripcion = descripcion;
         this.titulo = titulo;
         this.generos = require("./Generos.js");
