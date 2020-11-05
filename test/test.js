@@ -47,3 +47,11 @@ describe('CompruebaFavorito', function(){
         assert.equal(vgPrueba.aString(),"LoL Juego en línea de estrategia y rol MOBA 9.5","Videojuego favorito sacado con exito");
     });
 });
+
+describe('CompruebaValoracion', function(){
+    it('Comprueba que se puede valorar un videojuego', function(){
+        vgPrueba = new vg.Videojuego('Pokemon Perla','RPG por turnos de coleccionar monstruos',gen.mas16.RPG, 9.5);
+        vgPrueba.cambiarValoracion('Esta generacion en concreto ha resultado ser de mis favoritas por el avance de los gráficos en 3D, la narrativa y la OST');
+        assert.equal(vgPrueba.getValoracion().toString(),"Esta generacion en concreto ha resultado ser de mis favoritas por el avance de los gráficos en 3D, la narrativa y la OST");
+    });
+});

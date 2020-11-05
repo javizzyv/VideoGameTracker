@@ -1,11 +1,13 @@
 class Videojuego {
 
-    constructor(titulo, descripcion, generos, nota) {
+    constructor(titulo, descripcion, generos, nota, valoracion, duracion) {
         this.descripcion = descripcion;
         this.titulo = titulo;
         this.generos = require("./Generos.js");
         this.generos = generos;
         this.nota = nota;
+        this.valoracion = valoracion;
+        this.duracion = duracion;
     }
 
     cambiarNombre(nombre) {
@@ -24,6 +26,14 @@ class Videojuego {
         this.nota = not;
     }
 
+    cambiarValoracion(val){
+        this.valoracion = val;
+    }
+
+    cambiarDuracion(dur){
+        this.duracion = dur;
+    }
+
     getNombre(){
         return this.titulo;
     }
@@ -38,6 +48,14 @@ class Videojuego {
 
     getNota(){
         return this.nota;
+    }
+
+    getValoracion(){
+        return this.valoracion;
+    }
+
+    getDuracion(){
+        return this.duracion;
     }
 
     show () {
