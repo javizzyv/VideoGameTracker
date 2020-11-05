@@ -15,6 +15,10 @@ Se ha optado por node.js por las siguientes razones:
 
 Además [aquí](./docs/herramientas.md) se irán detallando las diferentes herramientas que se vayan usando.
 
+
+## Integración continua
+
+
 ## Docker
 
 Haciando click [aquí](docs/docker.md) se podrá ver todo lo referente a Docker (Dockerfile, Docker Hub, ...). 
@@ -27,6 +31,7 @@ Haciando click [aquí](docs/docker.md) se podrá ver todo lo referente a Docker 
 * El Dockerfile está [aquí](/Dockerfile)
 * Este es el repositorio en [Docker Hub](https://hub.docker.com/repository/docker/javizzyv/videogametracker/general) 
 * Este es el fichero de travis. [Travis](.travis.yml).
+* Este es el fichero de shippable. [Shippable](shippable.yml)
 
 ## Para ejecutar
 
