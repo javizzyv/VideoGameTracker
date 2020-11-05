@@ -5,7 +5,7 @@ node_js:
     - 11
     - 10
 build:
+    pre_ci:
+        - docker pull javizzyv/videogametracker
     ci:
-        - npm install --global gulp-cli
-        - npm install
-        - gulp test
+        - docker run -t -v `pwd`:/test javizzyv/videogametracker
