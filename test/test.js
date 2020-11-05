@@ -55,3 +55,11 @@ describe('CompruebaValoracion', function(){
         assert.equal(vgPrueba.getValoracion().toString(),"Esta generacion en concreto ha resultado ser de mis favoritas por el avance de los gráficos en 3D, la narrativa y la OST");
     });
 });
+
+describe('CompruebaDuracion', function(){
+    it('Comprueba que se puede poner la duracion de un videojuego', function(){
+        vgPrueba = new vg.Videojuego('Pokemon Perla','RPG por turnos de coleccionar monstruos',gen.mas16.RPG, 9.5);
+        vgPrueba.cambiarDuracion(34);
+        assert.equal(vgPrueba.getDuracion(),34);
+    });
+});
