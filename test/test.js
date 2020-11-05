@@ -75,3 +75,17 @@ describe('Comprueba comparacion duracion', function(){
         assert.equal(vgPrueba.getNombre(),"Pokemon Platino");
     });
 });
+
+describe('Comprueba videojuego mas largo', function(){
+    it('Comprueba que se puede sacar el videojuego que mas nos ha durado', function(){
+        var vgPrueba = new vg.Videojuego('Pokemon Platino','RPG por turnos de coleccionar monstruos',gen.mas16.RPG, 9.5, 34);
+        videojuegos = new Array();
+        videojuegos.push(vgPrueba);
+        vgPrueba = new vg.Videojuego('Pokemon Esmeralda','RPG por turnos de coleccionar monstruos',gen.mas16.RPG, 9.5, 30);
+        videojuegos.push(vgPrueba);
+        vgPrueba = new vg.Videojuego('Pokemon Cristal','RPG por turnos de coleccionar monstruos',gen.mas16.RPG, 9.5, 40);
+        videojuegos.push(vgPrueba);
+        vgPrueba = vgt.masLargo(videojuegos);
+        assert.equal(vgPrueba.getNombre(),"Pokemon Cristal");
+    });
+});
