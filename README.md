@@ -18,6 +18,52 @@ Además [aquí](./docs/herramientas.md) se irán detallando las diferentes herra
 
 ## Integración continua
 
+### Rúbrica 1 y 2
+
+Para empezar, he configurado travis, primero porque era el que había que hacer obligatoriamente, pero también por estos motivos:
+- Es gratuíto y más gracias al plan PRO que te da la UGR que hace que no se gasten créditos.
+- Detecta los push de GitHub sin necesidad de configurar nada extra.
+- Se hacen las builds para cada versión del lenguaje en paralelo y, por lo tanto, tarda mucho menos.
+- La sintaxis es sencilla y se puede usar el contenedor de Docker Hub sin mucho problema.
+
+En segundo lugar he optado por Shippable (siendo CircleCi mi tercera opción) principalmente por:
+- Detecta los push de GitHub sin necesidad de configurar nada extra.
+- La sintaxis es sencilla.
+- El plan gratuíto no te va por créditos limitados.
+En el resto de cosas Circle parecía mucho más prometedor (mejor interfaz y muchas más opciones), pero no me la quería jugar a gastar los créditos y tener algún problema.
+
+Builds funcionando en cada una:
+- [Travis](https://travis-ci.com/github/javizzyv/VideoGameTracker/builds/198692949)
+- [Shippable](https://app.shippable.com/github/javizzyv/VideoGameTracker/runs/5/summary/console)
+En caso de que no funcionen los links se pueden ver capturas aquí:
+- [Travis](docs/img/build-travis-cd.png)
+- [Shippable](docs/img/build-shippable-sd.png)
+
+Los archivos están aquí:
+- [Travis](.travis.yml)
+- [Shippable](shippable.yml)
+
+
+### Rúbrica 3
+
+En Travis se usa el contenedor de Docker que ya usaba el gestor de tareas así que lo cubre automáticamente.
+
+En cuanto a Shippable, se instala y usa Gulp para ejecutar los test's como se puede ver haciendo click [aquí](shippable.yml).
+
+### Rúbrica 4
+
+Se ha optado por usar el contenedor de Docker en Travis debido a su accesibilidad y se puede ver aquí:
+- [Travis](docs/img/travis-sin-docker.png) antes sin docker.
+- [Travis](.travis.yml) ahora con docker.
+
+En principio lo iba a usar en ambos, pero ciertos errores usando la directiva ```pre_ci``` en Shippable hizo que optase finalmente por solo Travis.
+
+### Rúbrica 5
+
+Se han avanzado tanto la HU3 como la HU5 y se han realizado los test's pertinentes.
+- [HU3](https://github.com/javizzyv/VideoGameTracker/issues/6)
+- [HU5](https://github.com/javizzyv/VideoGameTracker/issues/15)
+
 
 ## Docker
 
@@ -31,7 +77,7 @@ Haciando click [aquí](docs/docker.md) se podrá ver todo lo referente a Docker 
 * El Dockerfile está [aquí](/Dockerfile)
 * Este es el repositorio en [Docker Hub](https://hub.docker.com/repository/docker/javizzyv/videogametracker/general) 
 * Este es el fichero de travis. [Travis](.travis.yml).
-* Este es el fichero de shippable. [Shippable](shippable.yml)
+* Este es el fichero de shippable. [Shippable](shippable.yml).
 
 ## Para ejecutar
 
