@@ -60,8 +60,9 @@ En principio lo iba a usar en ambos, pero ciertos errores usando la directiva ``
 
 ### Rúbrica 5
 
-Se han avanzado tanto la HU3 como la HU5 y se han realizado los test's pertinentes.
+Se han avanzado la HU3, la HU2 y la HU5 y se han realizado los test's pertinentes.
 - [HU3](https://github.com/javizzyv/VideoGameTracker/issues/6)
+- [HU2](https://github.com/javizzyv/VideoGameTracker/issues/5)
 - [HU5](https://github.com/javizzyv/VideoGameTracker/issues/15)
 
 
