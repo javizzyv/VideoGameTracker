@@ -29,19 +29,26 @@ Para empezar, he configurado travis, primero porque era el que había que hacer 
 En segundo lugar he optado por Shippable (siendo CircleCi mi tercera opción) principalmente por:
 - Detecta los push de GitHub sin necesidad de configurar nada extra.
 - La sintaxis es sencilla.
-- El plan gratuíto no te va por créditos limitados.
+- El plan gratuíto no va por créditos limitados.
 En el resto de cosas Circle parecía mucho más prometedor (mejor interfaz y muchas más opciones), pero no me la quería jugar a gastar los créditos y tener algún problema.
 
 Builds funcionando en cada una:
 - [Travis](https://travis-ci.com/github/javizzyv/VideoGameTracker/builds/198692949)
 - [Shippable](https://app.shippable.com/github/javizzyv/VideoGameTracker/runs/5/summary/console)
+
 En caso de que no funcionen los links se pueden ver capturas aquí:
+
 - [Travis](docs/img/build-travis-cd.png)
 - [Shippable](docs/img/build-shippable-sd.png)
 
-Los archivos están aquí:
+Los archivos de configuración están aquí:
 - [Travis](.travis.yml)
 - [Shippable](shippable.yml)
+
+Se usan esas versiones del lenguaje por:
+- La primera es en la que me he basado desde el principio.
+- La segunda es la versión base de la que uso.
+- Las siguientes son versiones anteriores escalonadas para ver cuanta compatibilidad se puede llegar a tener.
 
 
 ### Rúbrica 3
