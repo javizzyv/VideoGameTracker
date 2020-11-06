@@ -7,5 +7,5 @@ node_js:
 build:
     ci:
         - npm install --global gulp-cli
-        - npm install
+        - gulp install
         - gulp test
