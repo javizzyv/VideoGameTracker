@@ -9,5 +9,6 @@ node_js:
 # Instalo dependencias y hago los test
 build:
     ci:
-        - docker pull javizzyv/videogametracker
-        - docker run -t -v `pwd`:/test javizzyv/videogametracker
+        - npm install --global gulp-cli
+        - gulp install
+        - gulp test
