@@ -17,13 +17,6 @@ describe('Crea Videojuego', function(){
     });
 });
 
-describe('Comprueba VGT', function(){
-    it('Comprueba que desde la clase VGT se puede trabajar con las otras clases correctamente (modular)', function(){
-        vgt.inicializar();
-        assert.equal(vgt.aString(),"LoL Juego en línea de estrategia y rol MOBA 9","VGT puede usar otras clases correctamente");
-    });
-});
-
 describe('Comprueba notas', function(){
     it('Comprueba que se pueden comparar notas', function(){
         var vgPrueba = new vg.Videojuego('LoL','Juego en línea de estrategia y rol',gen.mas16.MOB, 9);

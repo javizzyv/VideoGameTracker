@@ -1,23 +1,5 @@
 var VG = require("./Videojuego");
-//var VGPrueba = require("./Videojuego");
-var vg1 = new VG.Videojuego();
-var generos = require("./Generos");
 var videojuegos = new Array();
-
-function inicializar() {
-    vg1.cambiarNombre('LoL');
-    vg1.cambiarDescripcion('Juego en línea de estrategia y rol');
-    vg1.cambiarGeneros(generos.mas16.MOB);
-    vg1.cambiarNota(9);
-}
-
-function aString() {
-    return vg1.aString();
-}
-
-function show () {
-    console.log("Aún no hay ningún videojuego");
-}
 
 function favoritoGenero(gen, vgs){
     var genero = require("./Generos");
@@ -70,15 +52,6 @@ function masLargo(vgs){
     }
     return vgAux;
 }
-
-/*show();*/
-
-inicializar();
-
-console.log(vg1.getNombre());
-console.log(vg1.getDescripcion());
-console.log(vg1.getGeneros());
-console.log(vg1.aString());
 
 module.exports.inicializar = inicializar;
 module.exports.aString = aString;
