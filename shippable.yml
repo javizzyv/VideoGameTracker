@@ -9,6 +9,6 @@ node_js:
 # Instalo dependencias y hago los test
 build:
     ci:
-        - npm install --global gulp-cli
+        - npm install -g gulp
         - gulp install
         - gulp test
