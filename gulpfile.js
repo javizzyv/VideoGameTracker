@@ -10,7 +10,8 @@ gulp.task('test', async function() {
 
 gulp.task('install', async function() {
     process.stdout.write(gulp.src('./')
-        .pipe(run('npm install')));
+        .pipe(run('npm install'))
+        .pipe(gulp.dest('./')));
 })
 
 exports.default = async function() {
