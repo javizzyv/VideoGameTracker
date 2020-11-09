@@ -9,11 +9,10 @@ gulp.task('test', async function() {
 });
 
 gulp.task('install', async function() {
-    process.stdout.write(gulp.src('./')
-        .pipe(run('npm install'))
-        .pipe(gulp.dest('./')));
+    gulp.src('./')
+        .pipe(run('npm install'));
 })
 
-exports.default = async function(cb) {
+exports.default = function(cb) {
     cb();
 }
