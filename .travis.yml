@@ -1,10 +1,11 @@
+# Indico que voy a usar Nodejs
 language: node_js
-node_js:
-    - 12.18.4
-    - 12
-    - 11
-    - 10
+# Indico que voy a usar docker para que se instale
+services:
+    - docker
+# Antes de instalar, descargo el contenedor
 before_install:
     - docker pull javizzyv/videogametracker
+# Ejecuto el contenedor
 script:
     - docker run -t -v `pwd`:/test javizzyv/videogametracker
