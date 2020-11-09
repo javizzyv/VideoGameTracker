@@ -2,10 +2,10 @@
 language: node_js
 # Indico las versiones que quiero que se prueben
 node_js:
-    - 12.18.4
-    - 12
-    - 11
-    - 10
+    - 12.18.0
+    - 9
+    - 8
+    - 7
 # Instalo dependencias y hago los test
 build:
     ci:
