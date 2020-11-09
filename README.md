@@ -21,7 +21,7 @@ Además [aquí](./docs/herramientas.md) se irán detallando las diferentes herra
 ### Rúbrica 1 y 2
 
 Para empezar, he configurado travis, primero porque era el que había que hacer obligatoriamente, pero también por estos motivos:
-- Es gratuíto y más gracias al plan PRO que te da la UGR que hace que no se gasten créditos.
+- Es gratuíto y más gracias al plan PRO de GitHub que te da la UGR que hace que no se gasten créditos.
 - Detecta los push de GitHub sin necesidad de configurar nada extra.
 - Se hacen las builds para cada versión del lenguaje en paralelo y, por lo tanto, tarda mucho menos.
 - La sintaxis es sencilla y se puede usar el contenedor de Docker Hub sin mucho problema.
