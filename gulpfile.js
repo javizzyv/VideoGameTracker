@@ -14,6 +14,6 @@ gulp.task('install', async function() {
         .pipe(gulp.dest('./')));
 })
 
-exports.default = async function() {
-
+exports.default = async function(cb) {
+    cb();
 }
