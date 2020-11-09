@@ -8,4 +8,4 @@ before_install:
     - docker pull javizzyv/videogametracker
 # Ejecuto el contenedor
 script:
-    - docker run -t -v `pwd`:/test javizzyv/videogametracker
+    - docker run -t -v /test javizzyv/videogametracker
