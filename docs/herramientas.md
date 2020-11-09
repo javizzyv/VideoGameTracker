@@ -1,5 +1,9 @@
 # Herramientas
 
+Se ha optado por node.js por las siguientes razones:
+* Por su popularidad en empresas y de cara a aprender un nuevo lenguaje muy usado en el ámbito laboral.
+* Por la existencia de múltiples herramientas que ayudan en el desarrollo con node.js.
+
 * Como framework aún no se ha decidido que usar (no implementado).
 * Como controlador de versiones se usará ***nvm***.
 * Para los test se usará [Mocha](https://mochajs.org) debido a su sencillez tanto en la sintaxis como en la funciones (cosa que casa muy bien con mi aplicación ya que no es muy ambiciosa) y por su popularidad.

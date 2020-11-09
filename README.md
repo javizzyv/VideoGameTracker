@@ -9,11 +9,8 @@ API desarrollada para la asignatura IV en la ETSIIT
 La idea es solucionar el problema que tenemos cuando queremos llevar la cuenta de los videojuegos que nos pasamos, organizarlos según queramos y anotar que nos ha parecido sobre la marcha y no tener que recurrir al cutre bloc de notas ni tener que tener los juegos comprados en steam para poder organizarlos (con esto me refiero a otras plataformas de juego, no piratería ~~eso nunca~~).
 
 ## Lenguaje de programación y herramientas
-Se ha optado por node.js por las siguientes razones:
-- Por su popularidad en empresas y de cara a aprender un nuevo lenguaje muy usado en el ámbito laboral.
-- Por la existencia de múltiples herramientas que ayudan en el desarrollo con node.js.
 
-Además [aquí](./docs/herramientas.md) se irán detallando las diferentes herramientas que se vayan usando.
+[Aquí](/docs/herramientas.md) se irán detallando las diferentes herramientas que se vayan usando.
 
 
 ## Integración continua
