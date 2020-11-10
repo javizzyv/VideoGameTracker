@@ -53,8 +53,6 @@ function masLargo(vgs){
     return vgAux;
 }
 
-module.exports.inicializar = inicializar;
-module.exports.aString = aString;
 module.exports.favoritoGenero = favoritoGenero;
 module.exports.compararNotas = compararNotas;
 //module.exports.ordenarPorNota = ordenarPorNota;
