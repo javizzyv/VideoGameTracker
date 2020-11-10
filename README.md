@@ -42,6 +42,10 @@ Los archivos de configuración están aquí:
 - [Travis](.travis.yml)
 - [Shippable](shippable.yml)
 
+La justificación de los archivos de configuración está aquí:
+- [Travis](/docs/travisConf.md)
+- [Shippable](/docs/shippableConf.md)
+
 Se usan esas versiones del lenguaje por:
 - La primera es en la que me he basado desde el principio.
 - La segunda es la versión base de la que uso.
