@@ -40,6 +40,10 @@ Esto es lo que queremos que se haga durante la build, etiquetado con `build:`. E
 `npm install` hará que se instalen las dependencias, no se usa gulp install por fallos con el 'node_modules', tras haber probado 4 plugins diferentes de gulp para la ejecución de órdenes, los tres daban el mismo error. Revisando diversos foros todos recomendaban usar `npm install` con gulp así que he optado por hacerlo así.
 `gulp test` hará que se ejecute 'mocha' para pasar los test.
 
+Aquí se ve como se ejecuta:
+
+![](img/builCIShip.png)
+
 ## Versiones 
 
 - **12:** He usado esta versión debido a que es desde donde de implementa 'ES6 modules' que hace falta para React, y como en un principio me había llamado la atención, he decidido ir viendo la compatibilidad con esta versión por si en un futuro lo uso.
