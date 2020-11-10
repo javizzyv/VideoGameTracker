@@ -8,6 +8,8 @@ API desarrollada para la asignatura IV en la ETSIIT
 ## Descripción
 La idea es solucionar el problema que tenemos cuando queremos llevar la cuenta de los videojuegos que nos pasamos, organizarlos según queramos y anotar que nos ha parecido sobre la marcha y no tener que recurrir al cutre bloc de notas ni tener que tener los juegos comprados en steam para poder organizarlos (con esto me refiero a otras plataformas de juego, no piratería ~~eso nunca~~).
 
+En principio no lo había pensado teniendo distintos usuarios/jugadores en mente sino más como una aplicación local para cada uno de forma individual, si hiciese falta cambiar el enfoque así se hará.
+
 ## Lenguaje de programación y herramientas
 
 [Aquí](/docs/herramientas.md) se irán detallando las diferentes herramientas que se vayan usando.
