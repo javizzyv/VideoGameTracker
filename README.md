@@ -47,9 +47,7 @@ La justificación de los archivos de configuración está aquí:
 - [Shippable](/docs/shippableConf.md)
 
 Se usan esas versiones del lenguaje por:
-- La primera es en la que me he basado desde el principio.
-- La segunda es la versión base de la que uso.
-- Las siguientes son versiones anteriores escalonadas para ver cuanta compatibilidad se puede llegar a tener.
+- Ver justificación de cada archivo de configuración arriba.
 
 
 ### Rúbrica 3
