@@ -26,9 +26,9 @@ function compararNotas(vgs){
         return videojuegos[1];
 }
 
-/*function ordenarPorNota(vgs){
-
-}*/
+function ordenarPorNota(vgs){
+    throw new Error("No se ha implementado");
+}
 
 function compararDuracion(vgs){
     videojuegos = vgs;
@@ -55,6 +55,6 @@ function masLargo(vgs){
 
 module.exports.favoritoGenero = favoritoGenero;
 module.exports.compararNotas = compararNotas;
-//module.exports.ordenarPorNota = ordenarPorNota;
+module.exports.ordenarPorNota = ordenarPorNota;
 module.exports.compararDuracion = compararDuracion;
 module.exports.masLargo = masLargo;
