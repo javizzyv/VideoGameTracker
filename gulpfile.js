@@ -13,6 +13,10 @@ gulp.task('install', async function() {
         .pipe(run('npm install'));
 })
 
+const build = gulp.series(['install'], ['test']);
+
 exports.default = function(cb) {
     cb();
 }
+
+exports.build = build;
