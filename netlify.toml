@@ -3,6 +3,6 @@
   functions = "/netlify"
 
 [[redirects]]
-  from = "/netlify"
+  from = "./"
   to = "/.netlify/functions/index"
   status = 200
