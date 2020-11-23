@@ -1,5 +1,5 @@
 const datos = require ('./datos.json')
-var fs = require('fs'); fs.readFile('./datos.json', 'utf8', function (err, data) { if (err) throw err; // we'll not consider error handling for now var obj = JSON.parse(data); });
+var fs = require('fs'); fs.readFile('./datos.json', 'utf8', function (err, data) { if (err) throw err; else var obj = JSON.parse(data); });
 
 
 async function Favorito() {
