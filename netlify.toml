@@ -1,4 +1,8 @@
 [build]
 
   functions = "/netlify"
-  publish = "/netlify"
+
+[[redirects]]
+  from = "/netlify"
+  to = "/.netlify/netlify/index"
+  status = 200
