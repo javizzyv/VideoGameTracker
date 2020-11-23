@@ -5,7 +5,7 @@ var fs = require('fs'); fs.readFile('./datos.json', 'utf8', function (err, data)
 async function Favorito() {
   var notaAux = 0;
   //var datosJ = JSON.parse(datos);
-  return data;
+  return obj;
 }
 
 module.exports = async (req, res) => { // this function will be launched when the API is called.
