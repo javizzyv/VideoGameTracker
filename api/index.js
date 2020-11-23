@@ -1,11 +1,17 @@
 const datos = require ('./datos.json')
-var fs = require('fs'); fs.readFile('./datos.json', 'utf8', function (err, data) { if (err) throw err; else var obj = JSON.parse(data); });
+var fs = require('fs'); 
+
 
 
 async function Favorito() {
-  var notaAux = 0;
-  //var datosJ = JSON.parse(datos);
-  return obj;
+
+  fs.readFile('./datos.json', (err, data) => {
+    if (err) 
+      throw err;
+    else 
+      var obj = JSON.parse(data);
+      return obj; 
+  });
 }
 
 module.exports = async (req, res) => { // this function will be launched when the API is called.
