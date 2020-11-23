@@ -10,9 +10,6 @@ exports.handler = async event => {
         }
     }
   
-    return {
-      statusCode: 200,
-      body: vgs.toString(),
-    }
+    return vgs;
   
   }
