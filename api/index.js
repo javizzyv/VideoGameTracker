@@ -19,6 +19,7 @@ async function Favorito() {
 module.exports = async (req, res) => { // this function will be launched when the API is called.
   try {
     status: 200, 
+    req.url = '/api';
     res.send(await Favorito()) // send the lyrics
   } catch (err) {
     status: 500,
