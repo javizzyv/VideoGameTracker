@@ -5,7 +5,7 @@ exports.handler = async function(event, context) {
 
     for (vg in datos.datos.videojuegos){
         if(datos.datos.videojuegos[vg].genero == "RPG"){
-            vgs += datos.datos.videojuegos[vg];
+            vgs += datos.datos.videojuegos[vg].nombre;
         }
     }
 
