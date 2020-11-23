@@ -10,7 +10,7 @@ async function Favorito() {
   vgFav = new VG.Videojuego('Pokemon Cristal','RPG por turnos de coleccionar monstruos',gen.mas16.RPG, 9.5, 40);
   videojuegos.push(vgFav);
   vgFav = vgt.masLargo(videojuegos);
-  return vgFav.getNombre().toString();
+  return vgFav.getNombre();
 }
 
 module.exports = async (req, res) => { // this function will be launched when the API is called.
