@@ -5,7 +5,7 @@ API desarrollada para la asignatura IV en la ETSIIT
 * Version: ![version](https://img.shields.io/badge/version-0.3.0-red)
 * Lenguaje: [![Powered by: JavaScript](https://img.shields.io/badge/powered%20by-javascript-yellow)](https://www.javascript.com)
 
-[![Netlify](https://www.netlify.com/img/deploy/button.svg)](https://video-game-tracker.netlify.app)
+[![Netlify](https://www.netlify.com/img/deploy/button.svg)](https://video-game-tracker.netlify.app/index)
 
 ## Descripción
 La idea es solucionar el problema que tenemos cuando queremos llevar la cuenta de los videojuegos que nos pasamos, organizarlos según queramos y anotar que nos ha parecido sobre la marcha y no tener que recurrir al cutre bloc de notas ni tener que tener los juegos comprados en steam para poder organizarlos (con esto me refiero a otras plataformas de juego, no piratería ~~eso nunca~~).
