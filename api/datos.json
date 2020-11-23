@@ -1,25 +1,25 @@
 {
-    "videojuegos":{
-        "PKMN1":{
+    "videojuegos":[
+        {
             "titulo":"Pokemon Platino",
             "nota":"7",
             "genero":"RPG",
             "terminado":"Si",
             "descripcion":"RPG por turnos de coleccionar monstruos"
         },
-        "PKMN2":{
+        {
             "titulo":"Pokemon Esmeralda",
             "nota":"8",
             "genero":"RPG",
             "terminado":"Si",
             "descripcion":"RPG por turnos de coleccionar monstruos"
         },
-        "PKMN3":{
+        {
             "titulo":"Pokemon Cristal",
             "nota":"9",
             "genero":"RPG",
             "terminado":"Si",
             "descripcion":"RPG por turnos de coleccionar monstruos"
         }
-    }
+    ]
 }
