@@ -1,17 +1,9 @@
-const datos = require ('./datos.json')
-var fs = require('fs'); 
+const datos = require ('./datos')
 
 
 
 async function Favorito() {
-
-  fs.readFile('./datos.json', (err, data) => {
-    if (err) 
-      throw err;
-    else 
-      var obj = JSON.parse(data);
-      return obj; 
-  });
+  return datos.datos.videojuegos[1].nombre;
 }
 
 module.exports = async (req, res) => { // this function will be launched when the API is called.
