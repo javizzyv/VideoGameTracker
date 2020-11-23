@@ -1,2 +1,2 @@
 
-module.exports.datos = {"videojuegos":[{"nombre":"PKMN1"},{"nombre":"PKMN2"}]};
+module.exports.datos = {"videojuegos":[{"nombre":"Pokemon Platino", "nota":7},{"nombre":"Pokemon Esmeralda", "nota":8},{"nombre":"Pokemon Cristal", "nota":9}]};
