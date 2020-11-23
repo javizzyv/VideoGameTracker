@@ -3,7 +3,7 @@ const datos = require ('./datos')
 
 
 async function Favorito() {
-  return datos.datos.videojuegos[1];
+  return datos.datos.videojuegos[1].nombre;
 }
 
 module.exports = async (req, res) => { // this function will be launched when the API is called.
