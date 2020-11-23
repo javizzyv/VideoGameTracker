@@ -1,9 +1,10 @@
-const datos = require ('datos.json')
+const datos = require ('./datos.json')
 
 async function Favorito() {
-  var notaAux = 0;
+  /*var notaAux = 0;
   var datosJ = JSON.parse(datos);
-  return datosJ['videojuegos'][1]['titulo']
+  return datosJ['videojuegos'][1]['titulo']*/
+  return 'Hola'
 }
 
 module.exports = async (req, res) => { // this function will be launched when the API is called.
