@@ -2,18 +2,18 @@ const datos = require ('./datos')
 
 async function Favorito() {
   var auxNota = 0;
-  var auxTitulo = '';
+  var auxVG = '';
 
   for (vg in datos.datos.videojuegos){
     if(datos.datos.videojuegos[vg].terminado){
       if(datos.datos.videojuegos[vg].nota > auxNota){
         auxNota = datos.datos.videojuegos[vg].nota;
-        auxTitulo = datos.datos.videojuegos[vg].nombre;
+        auxVG = datos.datos.videojuegos[vg];
       }
     }
   }
 
-  return auxTitulo;
+  return auxVG;
 }
 
 module.exports = async (req, res) => { // this function will be launched when the API is called.
