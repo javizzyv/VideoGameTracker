@@ -1,12 +1,16 @@
 const datos = require ('./datos')
 
+exports.handler = async function(event, context) {
+    var vgs = '';
 
-var vgs = '';
-
-for (vg in datos.datos.videojuegos){
-    if(datos.datos.videojuegos[vg].genero == "RPG"){
-        vgs += datos.datos.videojuegos[vg];
+    for (vg in datos.datos.videojuegos){
+        if(datos.datos.videojuegos[vg].genero == "RPG"){
+            vgs += datos.datos.videojuegos[vg];
+        }
     }
+
+    return {
+        statusCode: 200,
+        body: JSON.stringify({message: vgs.toString()})
+    };
 }
-  
-return vgs;
