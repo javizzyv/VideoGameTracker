@@ -17,64 +17,42 @@ En principio no lo había pensado teniendo distintos usuarios/jugadores en mente
 [Aquí](/docs/herramientas.md) se irán detallando las diferentes herramientas que se vayan usando.
 
 
+## Serverless
+
+### Vercel
+
+Para la conexión se han seguido los pasos de este archivo ---> [Pasos](docs/pasosVer.md)
+
+La función en vercel básicamente lo que hace es trabajar con ciertos datos que le pasamos, que son varios videojuegos diferentes con diferentes notas, y devolver el que tiene más nota, siendo este nuestro favorito personal objetivamente. Ver [aquí]((api/index.js)) el código comentado si queda alguna duda y [aquí](api/datos.js) para ver los datos que se pasan.
+
+Para ver Vercel ya desplegado ---> [Vercel](https://video-game-tracker.javizzyv.vercel.app/api)
+
+Se han creado ciertos issues y HU de acorde a esta parte que son:
+- [HU6](https://github.com/javizzyv/VideoGameTracker/issues/19).
+- [Issue](https://github.com/javizzyv/VideoGameTracker/issues/20).
+### Netlify
+
+Para la conexión se han seguido los pasos de este archivo ---> [Pasos](docs/pasosNet.md)
+
+La función de netlify básicamente usa ciertos videojuegos como datos de entrada, entre ellos devolverá los videojuegos que tengan un género común, ahora mismo lo hace solo con RPG porque la mayoría son de ese género. Ver [aquí]((netlify/index.js)) el código comentado si queda alguna duda y [aquí](netlify/datos.js) para ver los datos que se pasan.
+
+Para ver Netlify ya desplegado ---> [![Netlify](https://www.netlify.com/img/deploy/button.svg)](https://video-game-tracker.netlify.app/index)
+
+Se han creado ciertos issues y HU de acorde a esta parte que son:
+- [HU7](https://github.com/javizzyv/VideoGameTracker/issues/21).
+
+
+### Archivos de interés
+Links que pueden ser de interés:
+
+- [El archivo 5.json](5.json)
+- [Archivo de configuración de Netlify](netlify.toml)
+- [Carpeta de funciones de Netlify](/netlify)
+- [Carpeta con funciones de Vercel](/api)
+
 ## Integración continua
 
-### Rúbrica 1 y 2
-
-Para empezar, he configurado travis, primero porque era el que había que hacer obligatoriamente, pero también por estos motivos:
-- Es gratuíto y más gracias al plan PRO de GitHub que te da la UGR que hace que no se gasten créditos.
-- Detecta los push de GitHub sin necesidad de configurar nada extra.
-- Se hacen las builds para cada versión del lenguaje en paralelo y, por lo tanto, tarda mucho menos.
-- La sintaxis es sencilla y se puede usar el contenedor de Docker Hub sin mucho problema.
-
-En segundo lugar he optado por Shippable (siendo CircleCi mi tercera opción) principalmente por:
-- Detecta los push de GitHub sin necesidad de configurar nada extra.
-- La sintaxis es sencilla.
-- El plan gratuíto no va por créditos limitados.
-En el resto de cosas Circle parecía mucho más prometedor (mejor interfaz y muchas más opciones), pero no me la quería jugar a gastar los créditos y tener algún problema.
-
-Builds funcionando en cada una:
-- [Travis](https://travis-ci.com/github/javizzyv/VideoGameTracker/builds/198692949)
-- [Shippable](https://app.shippable.com/github/javizzyv/VideoGameTracker/runs/5/summary/console)
-
-En caso de que no funcionen los links se pueden ver capturas aquí:
-
-- [Travis](docs/img/build-travis-cd.png)
-- [Shippable](docs/img/build-shippable-sd.png)
-
-Los archivos de configuración están aquí:
-- [Travis](.travis.yml)
-- [Shippable](shippable.yml)
-
-La justificación de los archivos de configuración está aquí:
-- [Travis](/docs/travisConf.md)
-- [Shippable](/docs/shippableConf.md)
-
-Se usan esas versiones del lenguaje por:
-- Ver justificación de cada archivo de configuración arriba.
-
-
-### Rúbrica 3
-
-En Travis se usa el contenedor de Docker que ya usaba el gestor de tareas así que lo cubre automáticamente.
-
-En cuanto a Shippable, se instala y usa Gulp para ejecutar los test's como se puede ver haciendo click [aquí](shippable.yml).
-
-### Rúbrica 4
-
-Se ha optado por usar el contenedor de Docker en Travis debido a su accesibilidad y se puede ver aquí:
-- [Travis](docs/img/travis-sin-docker.png) antes sin docker.
-- [Travis](.travis.yml) ahora con docker.
-
-En principio lo iba a usar en ambos, pero ciertos errores usando la directiva ```pre_ci``` en Shippable hizo que optase finalmente por solo Travis.
-
-### Rúbrica 5
-
-Se han avanzado la HU3, la HU2 y la HU5 y se han realizado los test's pertinentes.
-- [HU3](https://github.com/javizzyv/VideoGameTracker/issues/6)
-- [HU2](https://github.com/javizzyv/VideoGameTracker/issues/5)
-- [HU5](https://github.com/javizzyv/VideoGameTracker/issues/15)
-
+Haciendo click [aquí](docs/ic.md) se podrá ver todo lo referente a IC.
 
 ## Docker
 
