@@ -1,2 +1,2 @@
-
+// Estos son los datos que usaré para netlify, los cuales tienen 3 videojuegos con diferente nota
 module.exports.datos = {"videojuegos":[{"nombre":"Pokemon Platino", "nota":7, "genero":"RPG", "descripcion":"RPG por turnos de coleccionar monstruos", "terminado":true},{"nombre":"Pokemon Esmeralda", "nota":8, "genero":"RPG", "descripcion":"RPG por turnos de coleccionar monstruos", "terminado":true},{"nombre":"Pokemon Cristal", "nota":9, "genero":"RPG", "descripcion":"RPG por turnos de coleccionar monstruos", "terminado":true}]};

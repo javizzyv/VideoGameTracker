@@ -1,5 +1,7 @@
+// Exporto los datos de los videojuegos
 const datos = require ('./datos')
 
+// Función asíncrona que devuelve el videojuego con más nota de los que hay en los datos
 async function Favorito() {
   var auxNota = 0;
   var auxVG = '';
@@ -16,12 +18,12 @@ async function Favorito() {
   return auxVG;
 }
 
-module.exports = async (req, res) => { // this function will be launched when the API is called.
+module.exports = async (req, res) => { // Esta función se llama cuando se lanza la api
   try {
-    status: 200,
-    res.send(await Favorito()) // send the lyrics
+    status: 200,  // Código de que todo ha ido bien
+    res.send(await Favorito()) // Llamo a la función que trabaja con los datos
   } catch (err) {
-    status: 500,
-    res.send(err) // send the thrown error
+    status: 500,  // Código de que ha habido un error
+    res.send(err) // Envía el error
   }
 }
