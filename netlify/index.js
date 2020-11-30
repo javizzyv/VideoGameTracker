@@ -12,14 +12,11 @@ exports.handler = async function(event, context) {
     // Bucle que busca los videojuegos que tienen como género RPG y los guarda en vgs
     for (vg in datos.datos.videojuegos){
         if(datos.datos.videojuegos[vg].genero == genero){
-            if(vgs == ''){
-                vgs += '<h2>';
-            }
+            vgs = ', ';
             vgs += datos.datos.videojuegos[vg].nombre;
-            vgs += ' '
         }
         if(vgs != ''){
-            vgs += '</h2>';
+            vgs += '.';
         }
     }
 
@@ -33,7 +30,7 @@ exports.handler = async function(event, context) {
     else{
         return {
             statusCode: 500,
-            body: 'No hay ningún videojuego RPG'
+            body: 'No hay ningún videojuego de género ' + genero.toString
         };
     }
 }

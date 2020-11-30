@@ -23,7 +23,7 @@ En principio no lo había pensado teniendo distintos usuarios/jugadores en mente
 
 Para la conexión se han seguido los pasos de este archivo ---> [Pasos](docs/pasosVer.md)
 
-Para concretar más, uso el método `module.exports = async (req, res)` para tratar las peticiones como bien está documentado en el código, por lo que cada vez se llamará a esta función que servirá los contenidos en el 'res.send()' y devolverá un código de que todo ha ido bien '200' en caso de que así sea.
+Para concretar más, uso el método `module.exports = async (req, res)` para tratar las peticiones como bien está documentado en el código, por lo que cada vez se llamará a esta función que servirá los contenidos en el 'res.send()' y devolverá un código de que todo ha ido bien '200' en caso de que así sea y '500' en caso contrario.
 
 Como archivo de configuración 'vercel.json' que se puede ver [aquí](vercel.json) simplemente tengo que no envíe notificaciones cada vez ya que la carpeta donde se publica y donde se ejecutan las funciones ya se ha definido en la propia web como se ha mostrado en los pasos.
 
@@ -38,13 +38,13 @@ Se han creado ciertos issues y HU de acorde a esta parte que son:
 
 Para la conexión se han seguido los pasos de este archivo ---> [Pasos](docs/pasosNet.md)
 
-Para concretar más, uso el método `exports.handler = async function(event, context)` para tratar las peticiones como bien está documentado en el código, por lo que cada vez se llamará a esta función que servirá los contenidos en el 'body' y devolverá un código de que todo ha ido bien '200' en caso de que así sea.
+Para concretar más, uso el método `exports.handler = async function(event, context)` para tratar las peticiones como bien está documentado en el código, por lo que cada vez se llamará a esta función que servirá los contenidos en el 'body' y devolverá un código de que todo ha ido bien '200' en caso de que así sea y '500' en caso contrario.
 
 En el archivo de configuración 'netlify.toml' que se puede ver [aquí](netlify.toml) se ha definido en el apartado 'build' donde se publicará el despliegue y donde están las funciones, en el apartado 'redirects' a qué función redirigirá en caso de poner '/index' que es para lo que está preparado. En cualquier caso el archivo está comentado.
 
-La función de netlify básicamente usa ciertos videojuegos como datos de entrada, entre ellos devolverá los videojuegos que tengan un género común, ahora mismo lo hace solo con RPG porque la mayoría son de ese género. Ver [aquí](netlify/index.js) el código comentado si queda alguna duda y [aquí](netlify/datos.js) para ver los datos que se pasan que son, aunque pueda parecer que no, diferentes a los de Vercel, en este caso añado algunos videojuegos de otros géneros a los que ya se usaban en Vercel para poder usar esta otra funcionalidad.
+La función de netlify básicamente usa ciertos videojuegos como datos de entrada, entre ellos devolverá los videojuegos que tengan un género común, este género se pasará por query string, en el caso que pongo el género es RPG. Ver [aquí](netlify/index.js) el código comentado si queda alguna duda y [aquí](netlify/datos.js) para ver los datos que se pasan que son, aunque pueda parecer que no, diferentes a los de Vercel, en este caso añado algunos videojuegos de otros géneros a los que ya se usaban en Vercel para poder usar esta otra funcionalidad.
 
-Para ver Netlify ya desplegado ---> [![Netlify](https://www.netlify.com/img/deploy/button.svg)](https://video-game-tracker.netlify.app/index)
+Para ver Netlify ya desplegado ---> [![Netlify](https://www.netlify.com/img/deploy/button.svg)](https://video-game-tracker.netlify.app/index?genero=RPG)
 
 Se han creado ciertos issues y HU de acorde a esta parte que son:
 - [HU7](https://github.com/javizzyv/VideoGameTracker/issues/21).
