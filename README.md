@@ -23,7 +23,7 @@ En principio no lo había pensado teniendo distintos usuarios/jugadores en mente
 
 Para la conexión se han seguido los pasos de este archivo ---> [Pasos](docs/pasosVer.md)
 
-Para concretar más, uso el método `module.exports = async (req, res)` para tratar las peticiones como bien está documentado en el código, por lo que cada vez se llamará a esta función que servirá los contenidos en el 'res.send()' y devolverá un código de que todo ha ido bien '200' en caso de que así sea y '500' en caso contrario.
+Para concretar más, uso el método `module.exports = async (req, res)` para tratar las peticiones como bien está documentado en el código, por lo que cada vez se llamará a esta función que servirá los contenidos en el 'res.send()' y devolverá un código de que todo ha ido bien '200' en caso de que así sea y un error personalizado en caso contrario.
 
 Como archivo de configuración 'vercel.json' que se puede ver [aquí](vercel.json) simplemente tengo que no envíe notificaciones cada vez ya que la carpeta donde se publica y donde se ejecutan las funciones ya se ha definido en la propia web como se ha mostrado en los pasos.
 
@@ -38,7 +38,7 @@ Se han creado ciertos issues y HU de acorde a esta parte que son:
 
 Para la conexión se han seguido los pasos de este archivo ---> [Pasos](docs/pasosNet.md)
 
-Para concretar más, uso el método `exports.handler = async function(event, context)` para tratar las peticiones como bien está documentado en el código, por lo que cada vez se llamará a esta función que servirá los contenidos en el 'body' y devolverá un código de que todo ha ido bien '200' en caso de que así sea y '500' en caso contrario.
+Para concretar más, uso el método `exports.handler = async function(event, context)` para tratar las peticiones como bien está documentado en el código, por lo que cada vez se llamará a esta función que servirá los contenidos en el 'body' y devolverá un código de que todo ha ido bien '200' en caso de que así sea y error personalizado en caso contrario.
 
 En el archivo de configuración 'netlify.toml' que se puede ver [aquí](netlify.toml) se ha definido en el apartado 'build' donde se publicará el despliegue y donde están las funciones, en el apartado 'redirects' a qué función redirigirá en caso de poner '/index' que es para lo que está preparado. En cualquier caso el archivo está comentado.
 

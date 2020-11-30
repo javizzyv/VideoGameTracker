@@ -24,8 +24,7 @@ module.exports = async (req, res) => { // Esta función se llama cuando se lanza
     status: 200,  // Código de que todo ha ido bien
     res.send(await Favorito()) // Llamo a la función que trabaja con los datos
   }
-  else {
-    status: 500,  // Código de que ha habido un error
-    res.send('No has terminado ningún juego o no les has puesto nota') // Envía el error
+  else { // Se produce un error
+    res.send('No has terminado ningún juego o no les has puesto nota')
   }
 }

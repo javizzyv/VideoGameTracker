@@ -29,7 +29,6 @@ exports.handler = async function(event, context) {
     }
     else{
         return {
-            statusCode: 500,
             body: 'No hay ningún videojuego de género ' + genero.toString
         };
     }
