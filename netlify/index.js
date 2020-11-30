@@ -4,12 +4,14 @@ const datos = require ('./datos')
 
 // Función para tratar peticiones
 exports.handler = async function(event, context) {
+    var genero = event.queryStringParameters.genero;
+
     // Inicializo vgs que será lo que se devuelva
     var vgs = '';
 
     // Bucle que busca los videojuegos que tienen como género RPG y los guarda en vgs
     for (vg in datos.datos.videojuegos){
-        if(datos.datos.videojuegos[vg].genero == "RPG"){
+        if(datos.datos.videojuegos[vg].genero == genero){
             vgs += datos.datos.videojuegos[vg].nombre;
             vgs += ' '
         }

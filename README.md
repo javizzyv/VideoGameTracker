@@ -27,7 +27,7 @@ Para concretar más, uso el método `module.exports = async (req, res)` para tra
 
 Como archivo de configuración 'vercel.json' que se puede ver [aquí](vercel.json) simplemente tengo que no envíe notificaciones cada vez ya que la carpeta donde se publica y donde se ejecutan las funciones ya se ha definido en la propia web como se ha mostrado en los pasos.
 
-La función en vercel básicamente lo que hace es trabajar con ciertos datos que le pasamos, que son varios videojuegos diferentes con diferentes notas, y devolver el que tiene más nota, siendo este nuestro favorito personal objetivamente. Ver [aquí](api/index.js) el código comentado si queda alguna duda y [aquí](api/datos.js) para ver los datos que se pasan.
+La función en vercel básicamente lo que hace es trabajar con ciertos datos que le pasamos, que son varios videojuegos diferentes con diferentes notas, y devolver el que tiene más nota, siendo este nuestro favorito personal objetivamente, esto solo será válido para los videojuegos que hayamos terminado. Ver [aquí](api/index.js) el código comentado si queda alguna duda y [aquí](api/datos.js) para ver los datos que se pasan.
 
 Para ver Vercel ya desplegado ---> [Vercel](https://video-game-tracker.javizzyv.vercel.app/api)
 

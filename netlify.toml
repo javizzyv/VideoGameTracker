@@ -4,5 +4,5 @@
 
 [[redirects]]
   from = "/index" # Redirijo desde index
-  to = "/.netlify/functions/index"  # a la función que he creado
+  to = "/.netlify/functions/index?genero=RPG"  # a la función que he creado
   status = 200  # Código de que todo ha ido bien

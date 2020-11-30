@@ -6,6 +6,7 @@ async function Favorito() {
   var auxNota = 0;
   var auxVG = '';
 
+  // Recorro los videojuegos y compruebo si se ha terminado y si se le ha puesto nota, de ser así guardo la mayor
   for (vg in datos.datos.videojuegos){
     if(datos.datos.videojuegos[vg].terminado){
       if(datos.datos.videojuegos[vg].nota > auxNota){
