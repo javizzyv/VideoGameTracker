@@ -5,7 +5,7 @@ API desarrollada para la asignatura IV en la ETSIIT
 * Version: ![version](https://img.shields.io/badge/version-0.3.0-red)
 * Lenguaje: [![Powered by: JavaScript](https://img.shields.io/badge/powered%20by-javascript-yellow)](https://www.javascript.com)
 
-[![Netlify](https://www.netlify.com/img/deploy/button.svg)](https://video-game-tracker.netlify.app/index)
+[![Netlify](https://www.netlify.com/img/deploy/button.svg)](https://video-game-tracker.netlify.app/index?genero=RPG)
 
 ## Descripción
 La idea es solucionar el problema que tenemos cuando queremos llevar la cuenta de los videojuegos que nos pasamos, organizarlos según queramos y anotar que nos ha parecido sobre la marcha y no tener que recurrir al cutre bloc de notas ni tener que tener los juegos comprados en steam para poder organizarlos (con esto me refiero a otras plataformas de juego, no piratería ~~eso nunca~~).
@@ -42,7 +42,7 @@ Para concretar más, uso el método `exports.handler = async function(event, con
 
 En el archivo de configuración 'netlify.toml' que se puede ver [aquí](netlify.toml) se ha definido en el apartado 'build' donde se publicará el despliegue y donde están las funciones, en el apartado 'redirects' a qué función redirigirá en caso de poner '/index' que es para lo que está preparado. En cualquier caso el archivo está comentado.
 
-La función de netlify básicamente usa ciertos videojuegos como datos de entrada, entre ellos devolverá los videojuegos que tengan un género común, ahora mismo lo hace solo con RPG porque la mayoría son de ese género. Ver [aquí](netlify/index.js) el código comentado si queda alguna duda y [aquí](netlify/datos.js) para ver los datos que se pasan.
+La función de netlify básicamente usa ciertos videojuegos como datos de entrada, entre ellos devolverá los videojuegos que tengan un género común, ahora mismo lo hace solo con RPG porque la mayoría son de ese género. Ver [aquí](netlify/index.js) el código comentado si queda alguna duda y [aquí](netlify/datos.js) para ver los datos que se pasan que son, aunque pueda parecer que no, diferentes a los de Vercel, en este caso añado algunos videojuegos de otros géneros a los que ya se usaban en Vercel para poder usar esta otra funcionalidad.
 
 Para ver Netlify ya desplegado ---> [![Netlify](https://www.netlify.com/img/deploy/button.svg)](https://video-game-tracker.netlify.app/index)
 
