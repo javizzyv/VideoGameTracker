@@ -19,11 +19,12 @@ async function Favorito() {
 }
 
 module.exports = async (req, res) => { // Esta función se llama cuando se lanza la api
-  try {
+  if(Favorito() != ''){
     status: 200,  // Código de que todo ha ido bien
     res.send(await Favorito()) // Llamo a la función que trabaja con los datos
-  } catch (err) {
+  }
+  else {
     status: 500,  // Código de que ha habido un error
-    res.send(err) // Envía el error
+    res.send('No has terminado ningún juego o no les has puesto nota') // Envía el error
   }
 }

@@ -11,12 +11,21 @@ exports.handler = async function(event, context) {
     for (vg in datos.datos.videojuegos){
         if(datos.datos.videojuegos[vg].genero == "RPG"){
             vgs += datos.datos.videojuegos[vg].nombre;
+            vgs += ' '
         }
     }
 
-    // Devuelvo que todo ha ido bien y los videojuegos RPG
-    return {
-        statusCode: 200,
-        body: vgs.toString()
-    };
+    if(vgs != ''){
+        // Devuelvo que todo ha ido bien y los videojuegos RPG
+        return {
+            statusCode: 200,
+            body: vgs.toString()
+        };
+    }
+    else{
+        return {
+            statusCode: 500,
+            body: 'No hay ningún videojuego RPG'
+        };
+    }
 }
