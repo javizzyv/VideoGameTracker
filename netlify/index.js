@@ -26,13 +26,13 @@ exports.handler = async function(event, context) {
         // Devuelvo que todo ha ido bien y los videojuegos RPG
         return {
             statusCode: 200,
-            body: vgs.toString()
+            body: vgs
         };
     }
     else{
         return {
             statusCode: 404,
-            body: 'No hay ningún videojuego de género ' + genero.toString()
+            body: 'No hay ningún videojuego de género ' + genero
         };
     }
 }
