@@ -48,6 +48,8 @@ La función de netlify básicamente usa ciertos videojuegos como datos de entrad
 
 Para ver Netlify ya desplegado ---> [![Netlify](https://www.netlify.com/img/deploy/button.svg)](https://video-game-tracker.netlify.app/index?genero=RPG)
 
+Aquí para ver los despliegues ---> [Despliegues](https://app.netlify.com/sites/video-game-tracker/deploys)
+
 Se han creado ciertos issues y HU de acorde a esta parte que son:
 - [HU7](https://github.com/javizzyv/VideoGameTracker/issues/21).
 
