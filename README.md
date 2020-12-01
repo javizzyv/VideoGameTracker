@@ -31,6 +31,8 @@ La función en vercel básicamente lo que hace es trabajar con ciertos datos que
 
 Para ver Vercel ya desplegado ---> [Vercel](https://video-game-tracker.javizzyv.vercel.app/api)
 
+Aquí para ver los despliegues ---> [Despliegues](https://github.com/javizzyv/VideoGameTracker/deployments/activity_log?environment=Production)
+
 Se han creado ciertos issues y HU de acorde a esta parte que son:
 - [HU6](https://github.com/javizzyv/VideoGameTracker/issues/19).
 - [Issue](https://github.com/javizzyv/VideoGameTracker/issues/20).
