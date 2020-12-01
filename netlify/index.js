@@ -12,7 +12,9 @@ exports.handler = async function(event, context) {
     // Bucle que busca los videojuegos que tienen como género RPG y los guarda en vgs
     for (vg in datos.datos.videojuegos){
         if(datos.datos.videojuegos[vg].genero == genero){
-            vgs = ', ';
+            if(vgs != ''){
+                vgs = ', ';
+            }
             vgs += datos.datos.videojuegos[vg].nombre;
         }
         if(vgs != ''){
