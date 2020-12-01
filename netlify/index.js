@@ -29,7 +29,8 @@ exports.handler = async function(event, context) {
     }
     else{
         return {
-            body: 'No hay ningún videojuego de género ' + genero.toString
+            statusCode: 404,
+            body: 'No hay ningún videojuego de género ' + genero.toString()
         };
     }
 }

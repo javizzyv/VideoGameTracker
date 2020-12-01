@@ -25,6 +25,7 @@ module.exports = async (req, res) => { // Esta función se llama cuando se lanza
     res.send(await Favorito()) // Llamo a la función que trabaja con los datos
   }
   else { // Se produce un error
+    status: 404,
     res.send('No has terminado ningún juego o no les has puesto nota')
   }
 }
