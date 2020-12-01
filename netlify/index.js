@@ -13,13 +13,15 @@ exports.handler = async function(event, context) {
     for (vg in datos.datos.videojuegos){
         if(datos.datos.videojuegos[vg].genero == genero){
             if(vgs != ''){
-                vgs = ', ';
+                vgs += ', ';
             }
             vgs += datos.datos.videojuegos[vg].nombre;
         }
-        if(vgs != ''){
-            vgs += '.';
-        }
+        
+    }
+
+    if(vgs != ''){
+        vgs += '.';
     }
 
     if(vgs != ''){
