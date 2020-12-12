@@ -11,9 +11,10 @@ gulp.task('test', async function() {
     .pipe(mocha());
 });
 
-gulp.task('install', async function() {
-    gulp.src('./')
-        .pipe(run('npm install'));
+gulp.task('install', async function(cb) {
+    /*gulp.src('./')
+        .pipe(run('npm install'));*/
+    cb();
 })
 
 gulp.task('start', async function() {
@@ -21,10 +22,14 @@ gulp.task('start', async function() {
         .pipe(run('npm start'));
 });
 
-const build = gulp.series(['install'], ['test']);
+gulp.task('build', async function(cb) {
+    cb();
+});
+
+//const build = gulp.series(/*['install'], ['test']*/);
 
 exports.default = function(cb) {
     cb();
 }
 
-exports.build = build;
+//exports.build = build;
