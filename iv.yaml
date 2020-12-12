@@ -6,3 +6,4 @@ lenguaje: JavaScript
 taskfile: gulpfile.js
 test: test/test.js
 URL: https://video-game-tracker.javizzyv.vercel.app/api
+make: gulp
