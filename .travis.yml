@@ -1,5 +1,6 @@
 # Indico que voy a usar Nodejs
 language: node_js
+node_js: 12.18.4
 # Indico que voy a usar docker para que se instale
 services:
     - docker
