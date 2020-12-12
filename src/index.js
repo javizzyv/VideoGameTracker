@@ -1,7 +1,10 @@
 const fastify = require('fastify')({logger: true}) // Usa Pino
 var vgt = require('../src/VGT');
+var VG = require("./Videojuego");
 
-vgt.inicializarVideojuegos();
+const atributos = ['nombre','descripcion','generos','nota','duracion','valoracion']; // Establezco los atributos que se pueden cambiar
+
+vgt.inicializarVideojuegos();                       // Inicializo los juegos
 
 fastify.get('/', async (request, reply) => {        // Atiende a peticiones get al raíz
     return { aplicacion: 'VGT' }                    // Digo simplemente de que aplicación se trata
@@ -35,17 +38,16 @@ fastify.get('/videojuegos', async (request, reply) => { // Método get general p
 
 
 fastify.get('/videojuegos/:nombre', async (request, reply) => { // Método get para ver un videojuego concreto
-    var resultado = []                                          // httpie usar el comando: http localhost:3000/videojuegos/StreetFighterV
-    var videojuegos = []
+    var resultado = [];                                          // httpie usar el comando: http localhost:3000/videojuegos/StreetFighterV
+    var videojuegos = [];
     videojuegos = vgt.getVideojuegos();
     var parametros = request.params;
     var nombre = parametros["nombre"];
-    console.log(nombre);
 
     for(let i=0 ; i<videojuegos.length ; i++){
         if(videojuegos[i].getNombre().replace(/\s+/g, '') == nombre){   // Elimino los espacios en blanco para poder comparar cadenas
             resultado.push({
-                nombre:videojuegos[i].getNombre(),              // Como fastify pone en formato json las respuestas directamente, no hace falta formatear
+                nombre:videojuegos[i].getNombre(),                      // Como fastify pone en formato json las respuestas directamente, no hace falta formatear
                 descripcion:videojuegos[i].getDescripcion(),
                 genero:videojuegos[i].getGeneros(),
                 nota:videojuegos[i].getNota(),
@@ -64,16 +66,124 @@ fastify.get('/videojuegos/:nombre', async (request, reply) => { // Método get p
 })
 
 
-fastify.put('/videojuegos', async (request, reply) => {
-    return 'a';
+fastify.put('/videojuegos/:nombre', async (request, reply) => { // Método put que actualiza un videojuego existente, para probar
+    var atributo;                                               // con httpie usar el comando: http PUT localhost:3000/videojuegos/StreetFighterV?atributo=x
+    var parametro;
+    var esta = false;
+    var parametros = request.params;
+    var nombre = parametros["nombre"];
+
+    for(let i=0 ; i<atributos.length ; i++){
+        if(atributos[i] in request.query){
+            esta = true;
+            atributo = request.query[atributos[i]];
+            parametro = atributos[i];
+        }
+    }
+
+    if(esta){
+        var resultado = [];
+        var videojuegos = [];
+        videojuegos = vgt.getVideojuegos();
+
+        for(let i=0 ; i<videojuegos.length ; i++){
+            if(videojuegos[i].getNombre().replace(/\s+/g, '') == nombre){   // Elimino los espacios en blanco para poder comparar cadenas
+                //'nombre','descripcion','generos','nota','duracion','valoracion'
+                switch(parametro){
+                    case 'nombre':
+                        videojuegos[i].cambiarNombre(atributo);
+                        break;
+                    
+                    case 'descripcion':
+                        videojuegos[i].cambiarDescripcion(atributo);
+                        break;
+                    
+                    case 'generos':
+                        videojuegos[i].cambiarGeneros(atributo);
+                        break;
+
+                    case 'nota':
+                        videojuegos[i].cambiarNota(atributo);
+                        break;
+                    
+                    case 'duracion':
+                        videojuegos[i].cambiarDuracion(atributo);
+                        break;
+
+                    case 'valoracion':
+                        videojuegos[i].cambiarValoracion(atributo);
+                        break;
+                }
+    
+                
+                resultado.push({
+                    nombre:videojuegos[i].getNombre(),                      // Como fastify pone en formato json las respuestas directamente, no hace falta formatear
+                    descripcion:videojuegos[i].getDescripcion(),
+                    genero:videojuegos[i].getGeneros(),
+                    nota:videojuegos[i].getNota(),
+                    horas:videojuegos[i].getDuracion(),
+                    valoracion:videojuegos[i].getValoracion()
+                });
+            }
+        }
+
+        if (resultado.length > 0)
+            return resultado;
+    }
+    else
+        reply.code(400);
+        return {error: 'Bad Request, no es un atributo que se pueda cambiar y/o no existe'}        // Si no es un parámetro que se pueda modificar, devolvemos el código 400
 })
 
-fastify.delete('/videojuegos', async (request, reply) => {
-    return 'a';
+fastify.delete('/videojuegos/:nombre', async (request, reply) => {      // Método delete para borrar un videojuego, para probar con httpie hacer:
+    var videojuegos = [];                                               // http DELETE localhost:3000/videojuegos/StreetFighterV, http localhost:3000/videojuegos/StreetFighterV
+    videojuegos = vgt.getVideojuegos();    
+    var parametros = request.params;
+    var nombre = parametros["nombre"];
+    var esta = false;
+    var elemento;
+
+    for(let i=0 ; i<videojuegos.length ; i++){
+        if(videojuegos[i].getNombre().replace(/\s+/g, '') == nombre){
+            esta = true;
+            elemento = i;
+        }
+    }
+    
+    if(esta){
+        videojuegos.splice(elemento,1);
+        return {success: 'Elemento eliminado'}
+    }
+    else{
+        reply.code(404);
+        return {error: 'Not found'};        // Si no existe, devolvemos el código 404
+    }
 })
 
-fastify.post('/videojuegos', async (request, reply) => {
-    return 'a';
+fastify.post('/videojuegos/:nombre', async (request, reply) => {    // Método post para añadir un nuevo juego, para probar con httpie:
+    var videojuegos = [];                                           // http POST localhost:3000/videojuegos/loquesea
+    videojuegos = vgt.getVideojuegos();
+    var parametros = request.params;
+    var nombre = parametros["nombre"];
+    var esta = false;
+    console.log(request.query);
+
+    for(let i=0 ; i<videojuegos.length ; i++){
+        if(videojuegos[i].getNombre().replace(/\s+/g, '') == nombre){
+            esta = true;
+        }
+    }
+
+    if(esta){
+        reply.code(409);
+        return {error: 'Already Exists'};        // Si ya existe, devolvemos el código 409
+    }
+    else{
+        var vgNuevo = new VG.Videojuego(nombre);
+        videojuegos.push(vgNuevo);
+
+        return 'Nuevo juego introducido con éxito';
+    }
 })
 
 const start = async () => {         // Defino la función que se ejecutará para iniciar la aplicación
@@ -87,4 +197,4 @@ const start = async () => {         // Defino la función que se ejecutará para
 
 start()                             // Ejecuto la aplicación
 
-//module.exports = app
+module.exports = start
