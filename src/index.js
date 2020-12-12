@@ -1,3 +1,5 @@
+'use strict'
+
 const fastify = require('fastify')({logger: true}) // Usa Pino
 var vgt = require('../src/VGT');
 var VG = require("./Videojuego");
@@ -166,7 +168,6 @@ fastify.post('/videojuegos/:nombre', async (request, reply) => {    // Método p
     var parametros = request.params;
     var nombre = parametros["nombre"];
     var esta = false;
-    console.log(request.query);
 
     for(let i=0 ; i<videojuegos.length ; i++){
         if(videojuegos[i].getNombre().replace(/\s+/g, '') == nombre){
@@ -195,6 +196,16 @@ const start = async () => {         // Defino la función que se ejecutará para
     }
 }
 
+const close = async () => {         // Defino la función que se cerrará la aplicación
+    try {
+      await fastify.close()         // La cierro
+    } catch (err) {
+      fastify.log.error(err)        // Si ocurre algún error, guardo el log
+      process.exit(1)               // y salgo
+    }
+}
+
 start()                             // Ejecuto la aplicación
 
-module.exports = start
+module.export = start;
+module.exports.close = close;
