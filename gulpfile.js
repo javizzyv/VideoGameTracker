@@ -11,7 +11,7 @@ gulp.task('test', async function() {
     .pipe(mocha());
 });
 
-gulp.task('install', async function(cb) {
+gulp.task('install', async function(cb) {   // Aún no hay que instalar nada en concreto para el uso de Fastify
     /*gulp.src('./')
         .pipe(run('npm install'));*/
     cb();
@@ -22,7 +22,7 @@ gulp.task('start', async function() {
         .pipe(run('npm start'));
 });
 
-gulp.task('build', async function(cb) {
+gulp.task('build', async function(cb) {     // Aún no hay que montar nada en concreto para el uso de Fastify
     cb();
 });
 

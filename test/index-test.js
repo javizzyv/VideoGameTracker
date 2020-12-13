@@ -1,14 +1,14 @@
-app = require('../src/index.js')
+app = require('../src/index.js')        // app para realizar peticiones
 
 let chai = require('chai');
 let chaiHttp = require('chai-http');
-chai.use(chaiHttp);
+chai.use(chaiHttp);                     // uso chai con el plugin chaiHttp para las peticiones
 const expect = require('chai').expect;
-const url= 'http://localhost:3000';
+const url= 'http://localhost:3000';     // puerto donde se ejecuta la app
 
 
 
-describe('Videojuegos: ',()=>{
+describe('Videojuegos: ',()=>{                                  // Testea que se puestren todos los videojuegos con el método GET
     it('Deberia mostrar todos los videojuegos', (done) => {
     chai.request(url)
     .get('/videojuegos')
@@ -20,7 +20,7 @@ describe('Videojuegos: ',()=>{
     });
 });
 
-describe('Borra un videojuego ',()=>{
+describe('Borra un videojuego ',()=>{                           // Testea que se borre un videojuego con el método DELETE
     it('Deberia borrar un videojuego', (done) => {
     chai.request(url)
     .delete('/videojuegos/StreetFighterV')
@@ -32,7 +32,7 @@ describe('Borra un videojuego ',()=>{
     });
 });
 
-describe('Actualiza un videojuego ',()=>{
+describe('Actualiza un videojuego ',()=>{                       // Testea que se actualiza un videojuego con el método PUT
     it('Deberia actualizar un videojuego', (done) => {
     chai.request(url)
     .put('/videojuegos/PokemonCristal?duracion=200')
@@ -44,7 +44,7 @@ describe('Actualiza un videojuego ',()=>{
     });
 });
 
-describe('Añade un videojuego ',()=>{
+describe('Añade un videojuego ',()=>{                           // Testea que se añade un nuevo videojuego con el método POST
     it('Deberia añadir un videojuego', (done) => {
     chai.request(url)
     .post('/videojuegos/KingdomHearts')
@@ -56,7 +56,7 @@ describe('Añade un videojuego ',()=>{
     });
 });
 
-describe('Enseña un videojuego ',()=>{
+describe('Enseña un videojuego ',()=>{                          // Testea que se muestra un videojuego en concreto con el método GET
     it('Deberia enseñar un videojuego en concreto', (done) => {
     chai.request(url)
     .get('/videojuegos/PokemonCristal')
@@ -68,6 +68,6 @@ describe('Enseña un videojuego ',()=>{
     });
 });
 
-after(() => {
+after(() => {                                                   // Función que se ejecuta después del resto y que cierra el puerto de la aplicación
     app.close();
 });
